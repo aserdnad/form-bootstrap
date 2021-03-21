@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <form class="border  p-1">
+
+            <div class="form-header bg-light border-bottom">
+                <h2 class="p-2">Payment form example</h2>
+            </div>
+
+            <div class="alert alert-danger font-weight-bold m-3 p-2" role="alert">
+                Some field are missing 
+            </div>
+
+            <div class="form-row mt-3 ml-3 mr-3">
+
+                <div class="form-group col-5">
+                    <label for="inputCard" class="font-weight-bold">Card #</label>
+                    <input type="text" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXXXXXXXX">
+                </div>
+
+                <div class="form-group col-3 pl-3 pr-3">
+                    <label for="inputCVC" class="font-weight-bold">CVC #</label>
+                    <input type="number" class="form-control" id="inputCVC" placeholder="0000">
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="uinptAmount" class="font-weight-bold">Amount</label>
+                    <div class="d-flex">
+                        <p class="p-1">$</p> <input type="number" class="form-control" id="inputCVC" placeholder="Amount">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row ml-3 mr-3">
+
+                <div class="form-group col-6 pr-1">
+                    <label for="inputName" class="font-weight-bold">First Name</label>
+                    <input type="text" class="form-control" id="inputName">
+                </div>
+
+                <div class="form-group col-6 ">
+                    <label for="inputLast" class="font-weight-bold">Last</label>
+                    <input type="text" class="form-control" id="inputLast">
+                </div>
+            </div>
+
+            <div class="form-row ml-3 mr-3">
+                <div class="form-group col-6">
+                    <label for="inputCity" class="font-weight-bold">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+
+                <div class="form-group col-3 ">
+                    <label for="inputState" class="font-weight-bold">State</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Pick a state</option>
+                        <option>Miranda</option>
+                        <option>Merida</option>
+                        <option>Guarico</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-3 ">
+                    <label for="inputCode" class="font-weight-bold">Postal Code</label>
+                    <input type="number" class="form-control" id="inputCode">
+                </div>
+            </div>
+            
+            <div class="form-row ml-3 mr-3 d-flex justify-content-between">
+                <div class="form-group ml-2 col-3">
+                    <label for="inputCode" class="font-weight-bold">We accept</label>
+                    <div class="d-flex justify-content-around bg-secondary rounded p-2">
+                        <div class="form-check ml-1">
+                            <input class="form-check-input" type="radio" name="maestro" id="maestro" value="option1" checked>
+                            <label class="form-check-label bg-white" for="maestro">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </label>
+                          </div>
+    
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="visa" id="visa" value="option2">
+                            <label class="form-check-label bg-white" for="visa">
+                                <i class="fab fa-cc-visa"></i>
+                            </label>
+                          </div>
+    
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="check" id="check" value="option3">
+                            <label class="form-check-label bg-white" for="check">
+                                <i class="fas fa-money-check"></i>
+                            </label>
+                          </div>
+    
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="american" id="american" value="option4">
+                            <label class="form-check-label bg-white" for="american">
+                                <i class="fab fa-cc-amex"></i>
+                            </label>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="Message">Message</label>
+                        <textarea class="form-control" id="Message" rows="3"></textarea>
+                        <p class="text-secondary font-weight-light">Add any notes here.</p>
+                      </div>
+                </div>
+            </div>
+
+            <div class="bg-light border-bottom mt-3">
+                <div class="d-flex justify-content-end mb-2 mr-4">
+                    <button type="button" class="btn btn-secondary mt-3 mr-1">Cancel</button>
+                    <button type="submit" class="btn btn-primary mt-3">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>
